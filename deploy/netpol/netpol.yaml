@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: netpol1
+  ownerReferences:
+  - apiVersion: v1
+    kind: Namespace
+    controller: true
+    name: james1
+    uid: 33527521-e8e0-11e9-83bc-080027ce992e
+spec:
+  podSelector: {}
+  policyTypes:
+    - Egress
+    - Ingress
+  egress:
+    - {}
+  ingress:
+    - {}
